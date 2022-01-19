@@ -20,4 +20,9 @@ pip install subprocess
 
 <h2>Usage: </h2>
 
-python -t (target IP) -g (target gateway IP)
+python arp_spoofer.py -t (target IP) -g (target gateway IP)
+
+or
+
+python arp_spoofer.py --help
+
