@@ -2,8 +2,7 @@
 
 <h2>Description:</h2>
 
-This program helps in achieving man in the middle by sending a poisoned arp packet to the gateway and the desired target. which will then force the target traffic to flow through the Hakers OS.
-
+This script facilitates a man-in-the-middle attack by transmitting a malicious ARP packet to both the gateway and the intended target, compelling the target's traffic to pass through the attacker's operating system.
 <h2>Prerequsite</h2>
 
 pip install sys
