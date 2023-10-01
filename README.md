@@ -2,7 +2,7 @@
 
 <h2>Description:</h2>
 
-This program helps in achiving man in the midlle by sending a posiend arp packet to the gatway and the desired target. which will then force the targets traffic to flow through the Hakers OS. 
+This program helps in achieving man in the middle by sending a poisoned arp packet to the gateway and the desired target. which will then force the target traffic to flow through the Hakers OS.
 
 <h2>Prerequsite</h2>
 
