@@ -6,6 +6,7 @@ import scapy.all as scapy
 import optparse
 import re
 import subprocess
+from security import safe_command
 
 def get_arguments():
     parser = optparse.OptionParser()
@@ -43,7 +44,7 @@ def spoof(target_ip, gateway_ip):
     # print(packet.show())
     scapy.send(packet, verbose=False)
     scapy.send(packet2, verbose=False)
-    subprocess.call("echo 1 > /proc/sys/net/ipv4/ip_forward", shell=True)
+    safe_command.run(subprocess.call, "echo 1 > /proc/sys/net/ipv4/ip_forward", shell=True)
 
 def restore ():
     packet3 = scapy.ARP(op=2, pdst=desired_ip.target_ip, hwdst=get_mac(desired_ip.target_ip), psrc=desired_ip.gateway_ip,hwsrc=get_mac(desired_ip.gateway_ip))
